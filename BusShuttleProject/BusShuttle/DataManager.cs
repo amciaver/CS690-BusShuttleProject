@@ -44,8 +44,7 @@ public class DataManager {
             }
         
         
-        //Drivers.Add(new Driver("Huseyin Ergin"));
-        //Drivers.Add(new Driver("Jane Doe"));
+    
 
         PassengerData = new List<PassengerData>();
 
