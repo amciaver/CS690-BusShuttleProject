@@ -6,17 +6,26 @@ public class DataManagerTests
 {
     DataManager dataManager;
 
-    public DataManagerTests() {
-        File.WriteAllText("stops.txt","One"+Environment.NewLine+"Two"+Environment.NewLine+"Three"+Environment.NewLine+"Four"+Environment.NewLine+"Five");
-        dataManager = new DataManager();
-    }
+        public DataManagerTests() {
+                File.WriteAllText("stops.txt","One"+Environment.NewLine+"Two"+Environment.NewLine+"Three"+Environment.NewLine+"Four"+Environment.NewLine+"Five");
+                        dataManager = new DataManager();
+                                File.WriteAllText("drivers.txt","One"+Environment.NewLine);
+                                    }
 
-    [Fact]
-    public void Test_AddStop()
-    {
-        Assert.Equal(5,dataManager.Stops.Count);
-        dataManager.AddStop(new Stop("new stop"));
-        Assert.Equal(6,dataManager.Stops.Count);
-    }
+                                        [Fact]
+                                            public void Test_AddStop()
+                                                {
+                                                        Assert.Equal(5,dataManager.Stops.Count);
+                                                                dataManager.AddStop(new Stop("new stop"));
+                                                                        Assert.Equal(6,dataManager.Stops.Count);
+                                                                            }
 
-}
+                                                                                [Fact]
+                                                                                    public void Test_AddDriver() {
+                                                                                            Assert.Equal(1,dataManager.Drivers.Count);
+                                                                                                    dataManager.AddDriver(new Driver("new driver"));
+                                                                                                            Assert.Equal(2,dataManager.Drivers.Count);
+                                                                                                                }
+                                                                                                                    
+
+                                                                                                                    }
